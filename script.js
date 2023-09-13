@@ -1,5 +1,6 @@
 function threeSum(arr, target) {
-let minimum=Infinity;	
+let minimumdiff=Infinity;	
+let sum=Infinity;	
 for(let i=0;i<arr.length;i++)
 	{
 		for(let j=i+1;j<arr.length;j++)
@@ -7,9 +8,10 @@ for(let i=0;i<arr.length;i++)
 				for(let k=j+1;k<arr.length;k++)
 					{
 					  let x= arr[i]+arr[j]+arr[k]	;
-						if(Math.abs(x-target)<minimum)
+						if(Math.abs(x-target)<minimumdiff)
 						{
-							minimum=x;
+							minimumdiff=x-target;
+							sum=x;
 						}
 					}
 			}
