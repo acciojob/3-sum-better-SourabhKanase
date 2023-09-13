@@ -10,7 +10,7 @@ for(let i=0;i<arr.length;i++)
 					  let x= arr[i]+arr[j]+arr[k]	;
 						if(Math.abs(x-target)<minimumdiff)
 						{
-							minimumdiff=x-target;
+							minimumdiff=Math.abs(x-target);
 							sum=x;
 						}
 					}
